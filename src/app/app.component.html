@@ -1,7 +1,18 @@
 <mat-toolbar>
   <span>My App</span>
   <span class="example-spaces" style="flex: 1 1 auto;"></span>
+  <button mat-button [matMenuTriggerFor]="menu1">Angular Router</button>
+  <button mat-button >Menu 2</button>
+  <button mat-button >Menu 3</button>
+  <span class="example-spaces" style="flex: 1 1 auto;"></span>
 </mat-toolbar>
 <mat-divider></mat-divider>
 <!-- The routed views render in the <router-outlet>-->
 <router-outlet></router-outlet>
+
+<mat-menu #menu1="matMenu">
+  <button mat-menu-item >Home</button>
+  <button mat-menu-item >About</button>
+  <button mat-menu-item >Courses</button>
+
+</mat-menu>
